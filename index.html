@@ -1,0 +1,2210 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"03f6cd5d0f",applicationID:"328250229"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport"> 
+	<title>Lodha Group - India's No.1 Real Estate Developer</title> 
+	<meta name="descriptison" content="Lodha Group is India&#039;s premier real estate developer with a wide range of commercial and residential properties in Mumbai, Thane, Pune, Hyderabad, and London.">
+	<meta name="keywords" content="Lodha, real estate, developer">
+ 
+<!--- OOTB code: production ---->
+<!--script src="//assets.adobedtm.com/launch-EN462de3b696c74523ad942c1a19683c34.min.js" async></script-->
+<!--- OOTB code end---->  
+ 
+
+<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-52CX748');</script>
+	<!-- End Google Tag Manager -->
+<!--script> 
+	var digitaldata = {};
+	digitaldata = {'pageName':'lodha: Casa Greenwood','channel':'Casa Greenwood', 'projecttype': 'Residential properties', 'projectname': 'Casa Greenwood'}; _satellite.track('customlinkonload');
+</script-->
+
+	
+<!-- Plyr Video -->
+<link rel="stylesheet" href="https://unpkg.com/plyr@3/dist/plyr.css" />
+<!-- Preload -->
+<link
+  rel="preload"
+  as="font"
+  crossorigin
+  type="font/woff2"
+  href="https://cdn.plyr.io/static/fonts/gordita-medium.woff2"
+/>
+<link
+  rel="preload"
+  as="font"
+  crossorigin
+  type="font/woff2"
+  href="https://cdn.plyr.io/static/fonts/gordita-bold.woff2"
+/>
+<!-- END Plyr -->
+	<!-- Favicons -->
+	<link href="https://www.lodhagroup.in/home/assets/img/favicon.png" rel="icon">
+	<link href="https://www.lodhagroup.in/home/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+	<!-- Vendor CSS Files -->
+	<link href="https://www.lodhagroup.in/home/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://www.lodhagroup.in/home/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+	<link href="https://www.lodhagroup.in/home/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+	<link href="https://www.lodhagroup.in/home/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+	<link href="https://www.lodhagroup.in/home/assets/vendor/venobox/venobox.css" rel="stylesheet">
+	<link href="https://www.lodhagroup.in/home/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+	<link href="https://www.lodhagroup.in/home/assets/vendor/aos/aos.css" rel="stylesheet">
+	
+	<!-- Template Main CSS File -->
+	<link href="https://www.lodhagroup.in/home/assets/css/style.css" rel="stylesheet">
+	<link href="https://www.lodhagroup.in/home/assets/css/form.css" rel="stylesheet"> 
+	<link href="https://www.lodhagroup.in/home/assets/css/about.css" rel="stylesheet"> 
+	<!-- Template gallery CSS File -->
+	<link href="https://www.lodhagroup.in/home/assets/css/gallery.css" rel="stylesheet"> 
+	<link href="https://www.lodhagroup.in/home/assets/css/fotorama.css" rel="stylesheet"> 
+	<!-- Template tabacc CSS File -->
+	<link href="https://www.lodhagroup.in/home/assets/css/tabacc/tabacc.css" rel="stylesheet" />
+	<link href="https://www.lodhagroup.in/home/assets/css/tabacc/themes/minimal.css" rel="stylesheet" />
+	<!--[if IE 8]><link href="css/tabs+accordion/ie8.css" rel="stylesheet" /><![endif]-->
+	<link href="https://www.lodhagroup.in/home/assets/css/tab-style.css" rel="stylesheet" />  
+	<link href="https://www.lodhagroup.in/home/assets/css/font-awesome.min.css" rel="stylesheet" />     
+	<link href="https://www.lodhagroup.in/home/assets/css/responsiveslides.css" rel="stylesheet">
+	<!-- swiper CSS -->
+	<link href="https://www.lodhagroup.in/home/assets/css/swiper-bundle.min.css" rel="stylesheet">
+	<link href="https://www.lodhagroup.in/home/assets/css/swiper-style.css" rel="stylesheet">
+	
+	<!-- Tab CSS -->
+	 <link href="https://www.lodhagroup.in/home/assets/css/Responsive-Multipurpose-Tabs-Accordion-Plugin-style.css" rel="stylesheet"> 
+	  <link rel="stylesheet" href="https://www.lodhagroup.in/home/assets/css/metisMenu.min.css"> 
+	  
+	  <!-- hover CSS -->
+	 <link href="https://www.lodhagroup.in/home/assets/css/component.css" rel="stylesheet"> 
+	  <link rel="stylesheet" href="https://www.lodhagroup.in/home/assets/css/default.css">  
+	  
+	  <!-- Hotjar Tracking Code for https://www.lodhagroup.in/home/ -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:2240202,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+ 
+ <script type="text/javascript">
+(function(f,b){if(!b.__SV){var e,g,i,h;window.mixpanel=b;b._i=[];b.init=function(e,f,c){function g(a,d){var b=d.split(".");2==b.length&&(a=a[b[0]],d=b[1]);a[d]=function(){a.push([d].concat(Array.prototype.slice.call(arguments,0)))}}var a=b;"undefined"!==typeof c?a=b[c]=[]:c="mixpanel";a.people=a.people||[];a.toString=function(a){var d="mixpanel";"mixpanel"!==c&&(d+="."+c);a||(d+=" (stub)");return d};a.people.toString=function(){return a.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+for(h=0;h<i.length;h++)g(a,i[h]);var j="set set_once union unset remove delete".split(" ");a.get_group=function(){function b(c){d[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));a.push([e,call2])}}for(var d={},e=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<j.length;c++)b(j[c]);return d};b._i.push([e,f,c])};b.__SV=1.2;e=f.createElement("script");e.type="text/javascript";e.async=!0;e.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?
+MIXPANEL_CUSTOM_LIB_URL:"file:"===f.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";g=f.getElementsByTagName("script")[0];g.parentNode.insertBefore(e,g)}})(document,window.mixpanel||[]);
+mixpanel.init("66ee1c213061f88f47ae35cc718938aa");
+//mixpanel.track('Sign up');
+</script>
+
+<script type="application/ld+json">{"@context": 
+"https://schema.org","@type":"Organization","name": "Lodha Group","url": 
+"https://www.lodhagroup.in/","logo": 
+"https://www.lodhagroup.in/home/assets/img/lodhagroup-logo.png",
+"address": {"@type": "PostalAddress","streetAddress": 
+"LODHA Excelus Building, Apollo Mills Compound NM Joshi Marg, Mahalaxmi, Mumbai - 400 011",
+"addressLocality": "Mahalaxmi","addressRegion": "Maharashtra",
+"postalCode": "400011","addressCountry": "India"},"contactPoint": 
+{"@type": "ContactPoint","contactType": "contact","telephone": 
+"+91 (22) 67737373","email": "enquiries@lodhagroup.com"},"sameAs":
+["https://twitter.com/LODHA","https://www.instagram.com/lodhagroup_india",
+"https://www.facebook.com/LodhaGroup"]} </script>
+
+<style>
+.Error {
+    color: #f00;
+    font-size: 1em;
+}
+.contact-li{
+	display:none;
+}
+.no-f-page{   
+	display:none!important; 
+}
+.mb-wbCall {
+    xwidth: 100%!important; 
+}
+@media (min-width: 786px){
+#hero {
+    height: calc(98vh - 114px);
+}
+}
+:root {
+  --plyr-color-main: #BF933F;
+}
+</style>
+</head>
+<body>
+      
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-52CX748"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->  
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "WebSite",
+  "name": "Lodha Group",
+  "url": "https://www.lodhagroup.in/home/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.lodhagroup.in/search/node?keys=",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+  <!-- ======= Top Bar ======= -->
+  <!--section id="topbar" class="xd-none d-lg-block">
+    <div class="container clearfix">
+      <!--div class="contact-info float-left">
+        <i class="icofont-envelope"></i><a href="mailto:contact@example.com">contact@example.com</a>
+        <i class="icofont-phone"></i> +1 5589 55488 55
+      </div->
+      <-div class="social-links float-right">
+        <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
+        <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
+        <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
+        <a href="#" class="skype"><i class="icofont-skype"></i></a>
+        <a href="#" class="linkedin"><i class="icofont-linkedin"></i></i></a>
+      </div->
+	  <div class="logo center xfloat-left">
+        <a href="https://www.lodhagroup.in/home/"><img src="https://www.lodhagroup.in/home/assets/img/lodhagroup-logo.png" alt="" class="img-fluid"></a>
+       
+         <a href="index.html"><img src="assets/img/lodhagroup-logo.png" alt="" class="img-fluid"></a>
+      </div>
+    </div>
+  </section-->
+
+  <!-- ======= Header ======= -->
+  <!--div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="https://www.lodhagroup.in/home/index.php">Home</a>
+  <a href="https://www.lodhagroup.in/home/">Services</a>
+  <a href="https://www.lodhagroup.in/home/">Residential</a>
+  <a href="https://www.lodhagroup.in/home/">Commercial</a>
+</div-->
+
+  <header id="header">
+	<!--span class="float-left xmob-display xdesk-hide ml-3 mt-1 pl-2 " style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span-->
+    <div class="menu-wrap">
+		<a href="https://www.lodhagroup.in/home/" class="float-left mob-display desk-hide ml-5 mt-2 pl-2 mob-logo-s" ><img src="https://www.lodhagroup.in/home/assets/img/lodhagroup-logo.png" alt="" class="img-fluid "></a>
+		
+		<nav class="nav-menu xfloat-right xd-none xd-lg-block mob-hide xmob-display desk-hide">
+		<!--div class="rightmenu-logo"><img src="https://www.lodhagroup.in/home/assets/img/logo-lodha-black.png" /></div-->  
+        <ul>
+          
+          <li><a href="https://www.lodhagroup.in/all-projects?propertyType=Residential">Residential Properties</a></li>
+          <li><a href="https://www.lodhagroup.in/commercial-landing-projects">Commercial Properties</a></li>  
+          <button class="dropdown-btn lib">About Lodha 
+			<i class="fa fa-plus"></i>
+		  </button>
+		  <div class="dropdown-container" id="sub-menus">
+			<a href="https://www.lodhagroup.in/about/">Company Overview</a> 
+			<a href="https://www.lodhagroup.in/about/our-people.php">Management</a>
+			<a href="https://www.lodhagroup.in/about/our-awards.php">Honors and Awards</a>
+			<a href="https://www.lodhagroup.in/about/our-presence.php">Presence</a>
+			<!--a href="https://www.lodhagroup.in/about-us/our-partners">Our Partners</a-->
+			<a href="https://www.lodhagroup.in/about/social-initiatives.php">Initiatives</a>
+		  </div>
+          <li><a href="https://www.lodhagroup.in/sustainability/">Sustainability</a></li>   
+          <li><a href="https://www.lodhagroup.in/investor/overview">Investor Section</a></li>  
+          <li><a href="https://www.lodhagroup.in/nri/overview">NRI Corner</a></li>  
+          <li><a href="https://www.lodhapay.com/" target="_blank">Pay Online</a></li>  
+          <li><a href="https://www.lodhagroup.in/press-releases">Press Releases</a></li>  
+          <li><a href="https://www.lodhagroup.in/hr/why-lodha">Careers</a></li>  
+          <li><a href="https://www.lodhagroup.in/blogs/all">Blogs</a></li>  
+          <li><a href="https://www.lodhagroup.in/contact-us">Contact Us</a></li>  
+          <li><a href="https://myaccount.lodhagroup.in/s/login/?language=en_IN&startURL=%2Fs%2F&ec=302" target="_blank">My Account</a></li>  
+          <li><a href="https://www.lodhagroup.in/easylease/" target="_blank">Easylease</a></li>    
+          <li><a href="https://www.palava.in/" target="_blank">Palava City</a></li>  
+          <li><a href="https://www.lodhaluxury.com/" target="_blank">Lodha Luxury</a></li>  
+          <li><a href="https://www.lodhagroup.co.uk/" target="_blank">Lodha Group UK</a></li>  
+          <!--li class="xcontact-li xmob-hide xdesk-show" ><a href="javascript:void(0)" data-toggle="button" aria-pressed="false" autocomplete="off">Contact us</a></li--> 
+ 
+        </ul>
+		
+		 
+		
+      </nav><!-- .nav-menu -->
+
+    </div> 
+	<div class="center-logo-sec mt-2 mb-2 desk-show mob-hide"> 
+		<div class="center-logo">
+		<a href="https://www.lodhagroup.in/home/" ><img src="https://www.lodhagroup.in/home/assets/img/lodhagroup-logo.png" alt="" class="img-fluid"></a>
+		</div>
+	</div>
+	<a class="mob-hide xshow-whendown fixedHeader1" href="https://www.lodhagroup.in/home/">
+	<div class="social-links float-right righthicons-mar rightSec">
+        <ul> 
+		<li id="Search"><a class="favourite menu-search" target="_blank" href="https://www.lodhagroup.in/all-projects?tracker=homepage"><img src="https://www.lodhagroup.in/home/assets/img/search.svg"></a>
+	<p><a class="favourite menu-search" target="_blank" href="https://www.lodhagroup.in/all-projects?tracker=homepage">Search</a></p> 
+	</li>
+	<li id="Login"><a href="http://myaccount.lodhagroup.in" target="_blank"><img src="https://www.lodhagroup.in/home/assets/img/Login.svg"></a>
+	<p><a href="http://myaccount.lodhagroup.in" target="_blank">Login</a></p>
+	</li>
+	<!--li><a href="http://myaccount.lodhagroup.in" target="_blank"><img onclick="digitaldata = {pageName:'login', channel: 'login'}; _satellite.track(&quot;customlinkClicked&quot;);" src="https://www.lodhagroup.in/home/assets/img/icon-favourite.png"></a>
+	<p><a href="http://myaccount.lodhagroup.in" target="_blank">Compare</a></p>
+	</li-->
+</ul>
+        <!--a href="#" class="right-h-icons"><i class="fa fa-heart"></i></a-->
+       
+      </div>
+	  <div class="basic__body"></div>
+	</a> 
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <div class="xrow row-no-gutters no-margin headder-padding-40 hero-sec">
+		<div class="col-lg-12 no-padding no-margin my-left video-tm galleria">
+		  <!--section id="hero">
+				
+			<div class="callbacks_container">
+			  <ul class="rslides" id="slider4">
+				<li>
+				  <img class="mob-hide" src="assets/img/slide/slide-1.jpg" alt=""/>
+				  <img class="mob-display" src="assets/img/slide/640x750_lead_image_mobile.jpg" alt=""/>
+				  <p class="caption">This is a caption</p>
+				  
+				</li>
+				<li>
+				  <img class="mob-hide" src="assets/img/slide/slide-3.jpg" alt=""/>
+				  <img class="mob-display" src="assets/img/slide/640x750_lead_image_mobile.jpg" alt=""/>
+				  <p class="caption">This is another caption</p>
+				</li>
+				<li>
+				  <img class="mob-hide" src="assets/img/slide/slide-1.jpg" alt=""/>
+				  <img class="mob-display" src="assets/img/slide/640x750_lead_image_mobile.jpg" alt=""/>
+				  <p class="caption">The third caption</p>
+				</li>
+			  </ul>
+			</div>
+			<div class="price-banner"> 
+                        <div class="container">
+                            <div class="wrapper flex-wrp">
+                                <p class="next-line">Price : <strong><span class="rupyaINR">Rs.</span>  46.44 Lacs+ </strong></p>
+                                <p class="next-line">Typology :<strong>1, 2 &amp; 3 BHK</strong></p>
+                                <p class="next-line">Possession : <strong>April 2021</strong></p> 
+                                <p>Location : <strong>Mumbai-Nasik Highway, Thane</strong></p>
+                            </div>   
+                        </div> 
+                    </div>
+	  </section--><!-- End Hero --> 
+	  <style>
+/* Demo styles */
+/* Gallery measures that will be applied */
+.galleria {xheight:600px;    /* defines a static gallery height */max-width:100%; /* defines a responsive width */}
+.plyr{xheight:560px;    /* defines a static gallery height */max-width:100%; /* defines a responsive width */}
+.galleria-videoicon i {
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 15px 0 15px 25px;
+    display: block;
+    border-color: transparent transparent transparent #ffffff;
+    margin: 21px 0 0 28px;
+}
+.galleria-videoicon {
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    margin: -30px 0 0 -30px;
+    cursor: pointer;
+    background: #000;
+    background: rgb(189, 146, 52);
+    border-radius: 3px;
+    -webkit-transition: all 150ms;
+    border-radius: 50%;
+}
+.galleria-theme-twelve .galleria-image-nav-left, .galleria-theme-twelve .galleria-image-nav-right {
+    display: none;  
+}
+.btn-knowmore{
+color: #bd9234!important;
+    background: #ffffff!important;
+}
+.btn-knowmore:hover{
+color: #fff!important;
+    background: #bd9234!important;
+}
+.btn-outline-primary:hover {
+    border-color: #bd9234;
+}
+.btn-outline-primary.focus, .btn-outline-primary:focus {
+    box-shadow: none;
+}
+.video_background {
+    border: 1px solid #000;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 572px!important;
+    width: 100%;
+    margin-top: 67px;
+}
+h5{
+font-family: 'DIN-Regular';
+}
+.css-xgm0sd{
+    display: none!important;  
+}
+.owl-prev {
+	position: absolute;
+    left: -27px;
+    top: 41%;
+}.owl-next {
+	position: absolute;
+    right: -27px;
+    top: 41%;
+}
+.grborder{
+    border: 1px solid #dad8d8;
+    xborder-bottom: 1px solid #d9e8f4;
+    margin: -1px;
+	padding: 26px 5px;
+}
+.grborder:hover{
+       border: 1px solid #bd9234!important;
+    box-shadow: #e8e8e5 3px 3px 5px 2px!important;
+}
+
+.services .centerserch {
+    text-align: center;
+}
+a.searchproject:hover {
+    color: #000;
+}
+.searchproject {
+  font-size: 2rem;
+  padding: 0.5rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  overflow: hidden;
+  color: #000000;
+}
+.searchproject span.typed-text {
+  font-weight: normal;
+  color: #bd9234;
+}
+.searchproject span.cursor {
+  display: inline-block;
+  background-color: #ccc;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+}
+.searchproject span.cursor.typing {
+  animation: none;
+}
+/*----------Popup Css---------*/
+@media (min-width: 768px){
+.modal-header {display:block;}
+.modal-header .close{margin: -3rem -1rem -1rem auto;color: #000;}
+.modal-dialog {
+    max-width: 70%!important;
+	background:url(assets/img/bg.jpg) center;
+}
+.modal-content{
+	background-color: transparent;
+	border:none;
+}
+.modal-dialog-centered {
+	display: inherit;
+}
+.modal-body h2 {text-align:center;font-size: 18px;color:#000;}
+.modal-body h2 span { color:#bd9234;}
+.modal-body p {text-align:center;color:#000;}
+.modal-footer {display: block;text-align: center;border:none;}
+.modal-footer a {background: #bd9234;color: #fff;padding: 1% 2%;}
+.modal-footer a:hover {color: #fff;border: 1px solid #bd9234;}
+.border2 {
+    border: 1px solid #bd9234;
+    /* padding: 20px 15px 65px 15px; */
+	padding: 10px 10px 48px 10px;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+	background: rgba(255, 255, 255, 0.55);
+}
+h3.hedding-h-3 { 
+    font-size: .9rem;
+    font-family: "DIN-Medium";
+    padding-bottom: 0;
+	text-align:center;
+	line-height: 17px;
+}
+img.thumb-img {
+    margin-bottom: 8%;
+	vertical-align: middle;
+    border-style: none;
+    max-width: 100%;
+    width: 100%;
+}
+a.slide-footer {
+    background-color: #f6f2e3;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 12px 0;
+    display: block;
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+}
+}
+/*----------End Popup Css---------*/
+@keyframes blink {
+  0%  { background-color: #ccc; }
+  49% { background-color: #ccc; }
+  50% { background-color: transparent; }
+  99% { background-color: transparent; }
+  100%  { background-color: #ccc; }
+}
+
+@media (max-width: 767px){
+.plyr__poster {
+	background-image: none!important;
+}
+/*----------Popup Css---------*/
+.modal-dialog {
+    max-width: 100%!important;
+	background:url(assets/img/bg.jpg) center;
+	background-size: cover;
+    background-repeat: no-repeat;
+}
+.modal-content{
+	background-color: transparent;
+	border:none;
+}
+.modal-content{
+	background-color: transparent;
+	border:none;
+}
+.modal-dialog-centered {
+	display: inherit;
+}
+.modal-body h2 {text-align:center;font-size: 18px;color:#000;}
+.modal-body h2 span { color:#bd9234;}
+.modal-body p {text-align:center;color:#000;}
+.modal-footer {display: block;text-align: center;border:none;}
+.modal-footer a {background: #bd9234;color: #fff;padding: 1% 2%;}
+.modal-footer a:hover {color: #fff;border: 1px solid #bd9234;}
+.border2 {
+    border: 1px solid #bd9234;
+    /* padding: 20px 15px 65px 15px; */
+	padding: 10px 10px 48px 10px;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+	background: rgba(255, 255, 255, 0.55);
+	margin-bottom:5%;
+}
+h3.hedding-h-3 { 
+    font-size: .9rem;
+    font-family: "DIN-Medium";
+    padding-bottom: 0;
+	text-align:center;
+	line-height: 17px;
+}
+img.thumb-img {
+    margin-bottom: 8%;
+	vertical-align: middle;
+    border-style: none;
+    max-width: 100%;
+    width: 100%;
+}
+a.slide-footer {
+    background-color: #f6f2e3;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 12px 0;
+    display: block;
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+}
+/*----------End Popup Css---------*/
+}   
+        </style>
+	   <!-- div class="galleria"> 
+            
+            <!--a href="https://picsum.photos/id/426/1024/768.jpg">
+                <img src="https://picsum.photos/id/426/150/100.jpg"
+                     data-big="https://picsum.photos/id/426/1440/1080.jpg"
+                     data-description="by &lt;a href=&quot;https://unsplash.com/photos/01ZeHnK3F_4&quot;&gt;Ales Krivec&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com&quot;&gt;Unsplash&lt;/a&gt;"
+                     data-title="Valley town">
+            </a-- >
+            <a href="https://www.youtube.com/watch?v=W0LHTWG-UmQ?rel=0">
+                <span class="video">Works for youtube too.</span>
+            </a>
+			
+        </div--> 
+		<!--div id="Player" data-plyr-provider="youtube" data-plyr-embed-id="Wa_7bFjxb_0"></div>
+		<h1 class="mb-0 video-cap" id="videoHeading">Building the world's finest development</h2>   
+		</div--> 
+		<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="Lodha">
+      <meta name="author" content="Lodha">
+      <title>Lodha</title>
+    
+   
+   </head>
+   <body>
+ 
+           
+			<div class="desktop-show videowrap">
+
+ <video autoplay muted loop playsinline id="myVideo" width="100%" poster="assets/img/1349x758_Lodha_01.jpg"> 
+ <source src="Lodha_World's_Finest 16-9_07.mp4" type="video/mp4">
+ <!--source src="Low-res-for-landing-page-new.mp4" type="video/mp4"--> Your browser does not support HTML5 video.</video>
+ 
+</div>  
+  <audio autoplay> 
+  <source src="Trimmed_video_for_mobile.mp3" type="audio/mpeg"> 
+  Your browser does not support the audio tag.
+</audio> 
+<div class="mobile-show videowrap">  
+	 
+	 
+	 <video autoplay muted loop playsinline id="myVideo" width="100%" poster="assets/img/460xAuto_Lodha_01.jpg">  
+	   <source src="Lodha_World's_Finest 4-5_07.mp4" type="video/mp4"> 
+	   <!--source src="Trimmed_video_for_mobile-new.mp4" type="video/mp4"--> 
+	</video>
+	
+</div>
+       
+ 
+<script>
+    document.getElementById('.myVideo').play();
+</script> 
+<style>
+
+
+#myVideo {
+  position: inherit;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  margin-top: -60px;
+    z-index: -9999;
+    height: calc(100vh - -130px);
+}
+
+
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+.video-logo{
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+.video-logo .logoimage{
+    margin-top: 50px;
+}
+.video-content h1{
+	text-align: center;
+	font-family: 'georgia_1';
+	 text-transform: inherit;
+	   margin-top: 72px;
+       line-height: 35px;
+    float: left;
+    width: 100%;
+    margin-bottom: 70px;
+	font-size: 30px;
+}
+.video-content p{
+    font-size: 12px;
+    margin-top: 130px;
+	text-align: center;
+}
+.video-discover {
+    color: #fff!important;
+    text-decoration:none;
+    font-size: 13px;
+	font-family: 'georgia_1';
+	font-weight: 100;
+}
+.mobile-videocontent {
+    text-align: center;
+    font-family: 'georgia_1';
+        text-transform: inherit;
+    margin-top: 22px;
+    line-height: 32px;
+    color: #989898;
+    font-size: 22px;
+}
+.mobile-show{
+display:none;
+}
+@media (min-width: 768px) and (max-width: 1024px){
+
+.video-content h1 {
+    text-align: center;
+    font-family: 'georgia_1';
+    text-transform: inherit;
+    margin-top: 81px;
+    line-height: 41px;
+    float: left;
+    width: 100%;
+    margin-bottom: 31px!important;
+    font-size: 22px!important;
+}
+}
+
+@media (max-width: 767px){
+.video-content h1 {
+    margin-top: 138px;
+    line-height: 23px;
+    font-size: 16px;
+}
+
+.video-logo .logoimage {
+    margin-top: 0px;
+}
+#myVideo {
+    position: relative;
+    right: -1px;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+	margin-top:0px!important;
+	height: calc(100vh - 223px);
+}
+.video-logo {
+    padding: 10px 0px;
+}
+.mobile-show .video-discover {
+    color: #989898!important;
+    text-decoration:none;
+    font-size: 11px; 
+}
+.mobile-videocontent {
+    width: 92%;
+    float: none;
+    margin: 11px auto 0px;
+	    font-size: 21px;
+}
+.mobile-show{
+display:block!important;
+}
+.desktop-show{
+display:none!important; 
+}
+}
+</style> 
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"03f6cd5d0f","applicationID":"328250229","transactionName":"ZVdXYEcCWBFWB0FYV1wdYEZcTF4NWgEaWFZWV00aRQtG","queueTime":0,"applicationTime":0,"atts":"SRBUFg8YSx8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
+
+
+    
+		<!--iframe class="video_background" src="https://uat.lodhagroup.in/home/video_background.php" width="100%" height="500"></iframe-->
+		<div class="col-lg-12 xno-padding xno-margin my-left ok" id="ok">
+		<a href="#" class="scroll-down" address="true"></a>
+		<p  class="">&nbsp;</p>
+		</div>
+    </div>
+	 <div class="container  cunt-bg-whight">   
+
+        <div class="section-title " style="clear: both; text-align: left;">
+          <h2 class="mb-0">Building a Better Life</h2>
+        </div>
+ 
+        <div class="row  d-flex align-items-stretch">  
+          <div class="col-lg-6 faq-item content-home aos-init aos-animate" data-aos="fade-in" data-aos-duration="2000" data-aos-easing="ease-in-quad">
+			<p>We believe real estate is more than just building the proverbial four walls, it's about "Building a Better Life". This is the ideology with which we at Lodha have delivered the world's finest developments that have become some of the most iconic addresses and the most desirable residences in India as well as in London.
+			</p>
+          </div>
+   
+          <div class="col-lg-6 faq-item content-home aos-init aos-animate" data-aos="fade-in" data-aos-duration="2000" data-aos-easing="ease-in-quad">
+            <p>Our residential and commercial spaces are aimed at every segment, right from super luxury to budget, thereby enabling every aspiring consumer to fulfil their dream. </p>
+          </div>
+		  <div class="col-lg-12 faq-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="2000" data-aos-easing="ease-in-quad">
+			<a href="https://www.lodhagroup.in/about-us/about-company" target="_blank" class="Knowmore-click-track" data-event-name="Knowmore click"><button type="button" class="btn btn-outline-primary btn-knowmore xpt-2 xpb-2 video-tm mb-2">Know More</button>   </a> 
+		  </div>
+      </div>
+          <div class="col-lg-12 faq-item" data-aos="fade-up" data-aos-delay="400">
+            <p>&nbsp;</p>
+          </div>
+        </div>
+
+		 <div class="container  cunt-bg-whight">   
+
+        <div class="section-title " style="clear: both; text-align: left;">
+          <h2 class="mb-0"> Our Brands</h2>
+        </div>
+ 
+        <div class="row  d-flex align-items-stretch">  
+          <div class="col-lg-12 faq-item content-home aos-init aos-animate" data-aos="fade-up" data-aos-duration="2000" data-aos-easing="ease-in-quad">
+			<div class="container demo-3">
+			
+			<ul class="grid cs-style-3" id="brands">
+				<li>
+					<a target="_blanks" href="https://www.lodhagroup.in/about-us/about-company">
+						<figure>
+							<img src="assets/img/400x300_Lodha_logo.jpg" alt="img03"> 
+							<figcaption>
+								<p>Know more</p>
+							</figcaption>
+						</figure>
+					</a>
+				</li>
+				<li>
+					<a target="_blanks" href="https://www.lodhaluxury.com/about">
+						<figure>
+							<img src="assets/img/400x300_Lodha_Luxury_logo.jpg" alt="img03"> 
+							<figcaption>
+								<p>Know more</p>
+							</figcaption>
+						</figure>
+					</a>
+				</li>
+				<li>  
+					<a target="_blanks" href="https://www.palava.in/residential/about-us">
+						<figure>
+							<img src="assets/img/400x300_Palava_logo.jpg" alt="img03"> 
+							<figcaption>
+								<p>Know more</p>
+							</figcaption>
+						</figure>
+					</a>
+				</li>
+			</ul>
+		</div><!-- /container -->
+		
+          </div>
+		  
+   
+      </div>
+          <div class="col-lg-12 faq-item" data-aos="fade-up" data-aos-delay="400">
+            <p>&nbsp;</p>
+          </div>
+        </div>
+
+		<div class="container  cunt-bg-whight">   
+        <div class="row  d-flex align-items-stretch">  
+          <div class="col-lg-12 faq-item content-home aos-init aos-animate" data-aos="fade-up" data-aos-duration="2000" data-aos-easing="ease-in-quad">
+			<div class="container demo-3">
+				<div class="row">
+				  <div class="col-lg-12 banner-background pr-0 pl-0" id="every-indian-banner">
+					<a href="/joy/?tracker=home-banner" target="_blank" >
+						<img src="assets/img/hero-img1.jpg" class="desk-show mob-hideimp img-fluid" />  
+					</a>
+					<a href="/joy/?tracker=home-banner" target="_blank" >
+						<img src="assets/img/hero-mob-img1.jpg" class="desk-hide img-fluid" /> 
+					</a>	
+				  </div> 
+				</div>
+			</div>
+			</div><!-- /container -->
+          </div>
+		</div>
+          <div class="col-lg-12 faq-item" data-aos="fade-up" data-aos-delay="400">
+            <p>&nbsp;</p>
+          </div>
+        </div>
+     
+  <main id="main" class=" my-clear">
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+	
+      <div class="container">
+
+         <div class="row  d-flex align-items-stretch">
+			<div class="col-lg-12 faq-item content-home aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-quad">
+				<h2>Featured Projects</h2>
+				<p>We have delivered some of the world's finest developments. </p>
+			</div>
+		</div>
+		
+	<div class="col-lg-12 pr-0 pl-0">
+				 <!--div class="owl-carousel owl-theme">
+					<div class="item">
+					  <img src="assets/img/about.jpg"/>
+					  <h3 class="lodha-color pt-2">Frequently Asked</h3>
+					  <h5>Dolor sit amet</h5> 
+					</div>
+					<div class="item">
+					  <img src="assets/img/about.jpg"/>
+					  <h3 class="lodha-color pt-2">Frequently Asked</h3>
+					  <h5>Dolor sit amet</h5> 
+					</div>
+					<div class="item">
+					  <img src="assets/img/about.jpg"/>
+					  <h3 class="lodha-color pt-2">Frequently Asked</h3>
+					  <h5>Dolor sit amet</h5> 
+					</div>
+					<div class="item">
+					  <img src="assets/img/about.jpg"/>
+					  <h3 class="lodha-color pt-2">Frequently Asked</h3>
+					  <h5>Dolor sit amet</h5> 
+					</div>
+					<div class="item">
+					  <img src="assets/img/about.jpg"/>
+					  <h3 class="lodha-color pt-2">Frequently Asked</h3>
+					  <h5>Dolor sit amet</h5> 
+					</div>
+					<div class="item">
+					  <img src="assets/img/about.jpg"/>
+					  <h3 class="lodha-color pt-2">Frequently Asked</h3>
+					  <h5>Dolor sit amet</h5> 
+					</div>
+					<div class="item">
+					  <img src="assets/img/about.jpg"/>
+					  <h3 class="lodha-color pt-2">Frequently Asked</h3>
+					  <h5>Dolor sit amet</h5> 
+					</div>
+				  </div-->
+     
+	   <!-- Add Scrollbar -->
+	   <div class="col-lg-12 pr-0 pl-0 swiper-wrapperonecol"> 
+			  <!-- Slider main container -->
+				<div class="swiper-container swiper-wrapperone aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease-in-quad">
+				  <!-- Additional required wrapper -->  
+				  <div class="swiper-wrapper" id="featuredProjects">
+					<!-- Slides -->
+					<div class="swiper-slide"> <a href="https://www.palava.in" target="_blank">
+							<!--img src="https://www.lodhagroup.in/home/assets/img/lodhagroup.jpg" class="img-fluid" alt=""--> 
+							<img src="https://www.lodhagroup.in/home/assets/img/425x500/425x500-thumb_palava.jpg" class="img-fluid" alt=""> 
+							<h3 class="lodha-color pt-2 pb-0 pl-2 pr-2">Palava </h3>
+							<p class="pl-2 pr-2">India's number one smart city </p></a>
+					</div>
+					 <div class="swiper-slide"> <a href="https://www.lodhagroup.in/projects/residential-property-in-worli/world-towers/about" target="_blank">
+							<img src="https://www.lodhagroup.in/home/assets/img/425x500/425x500-thumb_twt.jpg" class="img-fluid" alt=""> 
+							<h3 class="lodha-color pt-2 pb-0 pl-2 pr-2">The World Towers </h3>
+							<p class="pl-2 pr-2 mb-0">India's finest living experience </p></a>
+					</div>
+					 <div class="swiper-slide"> <a href="https://www.lodhagroup.in/projects/residential-property-in-kandivali/lodha-woods/about" target="_blank">
+							<img src="https://www.lodhagroup.in/home/assets/img/425x500/425x300_JV_Kandivali_01.jpg" class="img-fluid" alt=""> 
+							<h3 class="lodha-color pt-2 pb-0 pl-2 pr-2">Lodha Woods</h3>
+							<p class="pl-2 pr-2 mb-0">Forest living right in the heart of the city</p></a>
+					</div>
+					 
+				</div> 
+				  <!-- If we need pagination -->
+				  <div class="swiper-pagination"></div>
+
+				  <!-- If we need navigation buttons -->
+				  <div class="swiper-button-prev"></div>
+				  <div class="swiper-button-next"></div>
+				  <!-- Progressbar -->
+				  <div class="swiper-progress-bar mb-4 mt-4">  
+					<span class="slide_progress-bar"></span>
+				  </div>
+				</div>
+				<!-- partial -->
+			  </div>
+		
+  </div>
+</div>	
+	  
+	 
+		 
+    </section><!-- End About Us Section -->
+	
+	<section id="services" class="services about">
+		
+		<div class="container">
+			<!--p class="searchproject">Search Projects in  <span class="typed-text"></span><span class="cursor">&nbsp;</span></p-->
+			<div class="row">
+			<div class="col-md-7 centerserch">
+			<a href="/all-projects?tracker=search-animation" class="searchproject"><i class="icofont-search"></i> Search Projects in  <span class="typed-text"></span><span class="cursor">&nbsp;</span></a>
+			</div>
+			<div class="col-md-5">
+			<p style="padding: 0.5rem;"><b>OR TRY OUR NEW</b> &nbsp;&nbsp;&nbsp;<a href="../property-search/?tracker=property-search" target="_blank" class="btn" style="color:#fff;"><img style="width:14px; float:left;margin-right: 6px;" src="assets/img/property-icon.svg" alt="" title=""/> PROPERTY SEARCH</a></p>
+			
+			</div>
+			</div>
+		</div>
+	</section><!-- End Services Section -->
+
+	
+    <section id="services" class="services about">
+		
+		<div class="container">
+
+         <div class="row  d-flex align-items-stretch">
+			<div class="col-lg-12 content-home faq-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-quad">
+				<h2>Customer Speak </h2>
+				<p class="mb-0">Here's what our residents have to say about their dream home! </p> 
+			  </div> 
+			<div class="col-lg-12 faq-item aos-init aos-animate mb-5" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease-in-quad">
+				<div class="callbacks_container">
+				  <ul class="rslides customer-speak" id="slider4">
+					<!--li class="about">
+						<div class="row no-gutters">
+						  <div class="col-lg-12 video-box">
+							<img src="https://www.lodhagroup.in/home/assets/img/1024x638-customer-speak_02.jpg" class="img-fluid" alt="">
+							<a href="https://www.youtube.com/watch?v=uk-_QGosKZI" class="venobox play-btn mb-4 vbox-item galleria-videoicon" data-vbtype="video" data-autoplay="true"></a>
+						  </div>
+						</div>
+						<div class="price-banner"> 
+							<div class="container">
+								<div class="wrapper flex-wrp">
+									<h3 class="lodha-color pt-2">Frequently Asked 1</h3>
+								</div>   
+							</div> 
+						</div>
+					</li-->
+					<li>
+						<div class="row no-gutters">
+						  <div class="col-lg-12 video-box">
+							<img src="https://www.lodhagroup.in/home/assets/img/1024x638-customer-speak_05.jpg" class="img-fluid" alt="">
+							<a href="https://www.youtube.com/watch?v=kHjTKARrsc0" class="venobox play-btn mb-4 vbox-item galleria-videoicon" data-vbtype="video" data-autoplay="true">
+							</a>
+						  </div>
+						</div>
+						<div class="price-banner">  
+							<div class="container">
+								<div class="wrapper flex-wrp">  
+									<h3 class="lodha-color pt-2">Here's a sneak peek into Krssna Mehta's amazing home at Lodha Park</h3> 
+								</div>   
+							</div> 
+						</div>
+					</li>
+					<li>
+						<div class="row no-gutters">
+						  <div class="col-lg-12 video-box">
+							<img src="https://www.lodhagroup.in/home/assets/img/1024x638-customer-speak_06.jpg" class="img-fluid" alt="">
+							<a href="https://www.youtube.com/watch?v=l0YvsjoTLEw" class="venobox play-btn mb-4 vbox-item galleria-videoicon" data-vbtype="video" data-autoplay="true">
+							</a>
+						  </div>
+						</div>
+						<div class="price-banner">  
+							<div class="container">
+								<div class="wrapper flex-wrp">  
+									<h3 class="lodha-color pt-2">Residents at Lodha Park share thoughts on forging bonds and building a community</h3> 
+								</div>   
+							</div> 
+						</div>
+					</li>
+					<li>
+						<div class="row no-gutters">
+						  <div class="col-lg-12 video-box">
+							<img src="https://www.lodhagroup.in/home/assets/img/1024x638-customer-speak_03.jpg" class="img-fluid" alt="">
+							<a href="https://www.youtube.com/watch?v=Rdcxh1wCYY0" class="venobox play-btn mb-4 vbox-item galleria-videoicon" data-vbtype="video" data-autoplay="true">
+							</a>
+						  </div> 
+						</div>
+						<div class="price-banner"> 
+							<div class="container">
+								<div class="wrapper flex-wrp">  
+									<h3 class="lodha-color pt-2">Bhavik Chinai reflects on his trajectory of growth and his life at The World Towers</h3> 
+								</div>   
+							</div> 
+						</div>
+					</li>
+					<!--li>
+						<div class="row no-gutters">
+						  <div class="col-lg-12 video-box">
+							<img src="https://www.lodhagroup.in/home/assets/img/1024x638-customer-speak_04.jpg" class="img-fluid" alt="">
+							<a href="https://www.youtube.com/watch?v=7HL705aXlJs" class="venobox play-btn mb-4 vbox-item galleria-videoicon" data-vbtype="video" data-autoplay="true"></a>
+						  </div>
+						</div>
+						<div class="price-banner">  
+							<div class="container">
+								<div class="wrapper flex-wrp">  
+									<h3 class="lodha-color pt-2">A resident of Lodha Fiorenza, Amit Tandon gives his take on working from home</h3> 
+								</div>   
+							</div> 
+						</div>
+					</li-->
+					<li>
+						<div class="row no-gutters">
+						  <div class="col-lg-12 video-box">
+							<img src="https://www.lodhagroup.in/home/assets/img/1024x638-customer-speak_01.jpg" class="img-fluid" alt="">
+							<a href="https://www.youtube.com/watch?v=tDE3PiUxAWQ" class="venobox play-btn mb-4 vbox-item galleria-videoicon" data-vbtype="video" data-autoplay="true">
+							</a>
+						  </div>
+						</div>
+						<div class="price-banner"> 
+							<div class="container">
+								<div class="wrapper flex-wrp">  
+									<h3 class="lodha-color pt-2">The future residents of Upper Thane, took a tour of the ready amenities </h3> 
+								</div>   
+							</div> 
+						</div>
+					</li>
+					<!--li>
+						<div class="row no-gutters">
+						  <div class="col-lg-12 video-box">
+							<img src="https://www.lodhagroup.in/home/assets/img/1024x638-customer-speak_02.jpg" class="img-fluid" alt="">
+							<a href="https://www.youtube.com/watch?v=TxRrvWz94i8" class="venobox play-btn mb-4 vbox-item galleria-videoicon" data-vbtype="video" data-autoplay="true"></a>
+						  </div>
+						</div>
+						<div class="price-banner"> 
+							<div class="container">
+								<div class="wrapper flex-wrp"> 
+									<h3 class="lodha-color pt-2">Simran Sachdeva shares the experience of finding her dream home with Lodha </h3> 
+								</div>   
+							</div> 
+						</div>
+					</li-->
+					
+					
+				  </ul>
+				</div>
+			</div>
+		</div>
+      </div>
+	</section><!-- End Services Section -->
+	
+	
+	<section id="services" class="services pb-0 pt-4">  
+      <div class="container">
+			 <div class="row  d-flex align-items-stretch pb-1">
+				<div class="col-lg-12 content-home faq-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease-in-quad" >
+					<h2>BetterLife </h2>
+					<p>Discover useful articles to guide you on your journey of finding a dream home  </p>
+				</div>
+			</div>
+		
+        <div class="row"> 
+          <a id="better-life-box1" href="https://www.lodhagroup.in/blogs/lodha-group-shaping-sustainable-future-carbon-neutral" class="col-lg-4 col-md-6 " target="_blank">
+		  <div class="xcol-lg-4 col-md-12 mb-4 xicon-box aos-init aos-animate grborder" data-aos="fade-up">
+           <h3 id="better-life-h1" class="lodha-color pt-2 pb-1 pl-2 pr-2">Building a better life, shaping a sustainable future</h3>
+							<p class="pl-2 pr-2 mb-0 lodha-color">05 JUNE 2021</p>  
+          </div>
+		  </a>
+          <a id="better-life-box2" href="https://www.lodhagroup.in/blogs/mistakes-to-avoid-first-time-homebuyer" class="col-lg-4 col-md-6 " target="_blank">
+		  <div class="xcol-lg-4 col-md-12 mb-4 xicon-box aos-init aos-animate grborder" data-aos="fade-up" data-aos-delay="100">
+     
+            <h3 id="better-life-h2" class="lodha-color pt-2 pb-1 pl-2 pr-2">9 mistakes to avoid before buying a new house</h3>
+							<p class="pl-2 pr-2 mb-0 lodha-color">28 APRIL 2021</p> 
+          </div>
+		  </a>
+          <a id="better-life-box3" href="https://www.lodhagroup.in/blogs/renting-a-house-advantages-and-disadvantages" class="col-lg-4 col-md-6 " target="_blank">
+		  <div class="xcol-lg-4 col-md-12 mb-4 xicon-box aos-init aos-animate grborder" data-aos="fade-up" data-aos-delay="200">
+          
+            <h3 id="better-life-h3" class="lodha-color pt-2 pb-1 pl-2 pr-2">How living on rent can impact child's development and upbringing</h3>
+							<p class="pl-2 pr-2 mb-0 lodha-color">15 MARCH 2021</p> 
+          </div>
+		  </a>
+          <a id="better-life-box4" href="https://www.lodhagroup.in/blogs/villas-for-the-discerning-few-by-lodha-luxury-and-isprava" class="col-lg-4 col-md-6 " target="_blank">
+		  <div class="xcol-lg-4 col-md-12 mb-4 xicon-box aos-init aos-animate grborder" data-aos="fade-up" data-aos-delay="300">
+         
+            <h3 id="better-life-h4" class="lodha-color pt-2 pb-1 pl-2 pr-2">Villas for the discerning few by Lodha Luxury and Isprava</h3>
+							<p class="pl-2 pr-2 mb-0 lodha-color">09 MARCH 2021</p> 
+          </div>
+		  </a>
+          <a id="better-life-box5" href="https://www.lodhagroup.in/blogs/designs-that-inspire-and-last-a-lifetime" class="col-lg-4 col-md-6 " target="_blank">
+		  <div class="xcol-lg-4 col-md-12 mb-4 xicon-box aos-init aos-animate grborder" data-aos="fade-up" data-aos-delay="400">
+          
+            <h3 id="better-life-h5" class="lodha-color pt-2 pb-1 pl-2 pr-2">Designs that inspire, and last a lifetime</h3>
+							<p class="pl-2 pr-2 mb-0 lodha-color">03 MARCH 2021</p> 
+          </div>
+		  </a>
+          <a id="better-life-box6" href="https://www.lodhagroup.in/blogs/all" class="col-lg-4 col-md-6 " target="_blank">
+		  <div class="xcol-lg-4 col-md-12 xmb-4 xicon-box aos-init aos-animate grborder" data-aos="fade-up" data-aos-delay="500">
+           
+            <h3 id="better-life-h6" class="lodha-color pt-2 pb-1 pl-2 pr-2">Explore More <br> &nbsp;</h3> 
+			<p class="pl-2 pr-2 mb-0 lodha-color">03 MARCH 2021</p>
+          </div>
+		  </a>  
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======= Our Portfolio Section ======= -->
+   
+    <!-- ======= Contact Us Section ======= -->
+    <section id="contact" class="contact mt-4 pb-4">
+		<div class="container xborder-tb">
+				 <div class="row  d-flex align-items-stretch">
+					<div class="col-lg-12 faq-item aos-init aos-animate" data-aos="fade-up">
+						<h2>Quick access</h2>
+						<div class="col-lg-12" >
+						<div class="row pr-0 pl-0" id="quick-access">  
+							<!--div class="col-lg-4 pr-0 pl-0 mob-2"><h5><a href="javascript:void(0);" data-toggle="modal" data-target="#formPopup" class="lodha-color" id="QuickAccessSales">Sales</a></h5></div-->
+							<div class="col-lg-4 pr-0 pl-0 mob-2"><h5><a href="/hr/explore-career" target="_blank" class="lodha-color">Work with us</a></h5></div>
+							<!--div class="col-lg-4 pr-0 pl-0 mob-2"><h5><a href="https://myaccount.lodhagroup.in/s/login/?language=en_IN&startURL=%2Fs%2F&ec=302" target="_blank" class="lodha-color">Customer care</a></h5></div-->
+							<div class="col-lg-4 pr-0 pl-0 mob-2"><h5><a href="/tools/" target="_blank" class="lodha-color">Tools</a></h5></div>
+							<!--div class="col-lg-4 pr-0 pl-0 mob-2"><h5><a href="https://www.lodhapay.com/" target="_blank" class="lodha-color">Pay online</a></h5></div-->
+							<div class="col-lg-4 pr-0 pl-0 mob-2"><h5><a href="/nri/overview" target="_blank" class="lodha-color">NRI corner</a></h5></div> 
+							<div class="col-lg-4 pr-0 pl-0 mob-2"><h5><a href="/investor-relations/" target="_blank" class="lodha-color">Investor</a></h5></div> 
+							<div class="col-lg-4 pr-0 pl-0 mob-2"><h5><a href="/blogs/all" target="_blank" class="lodha-color">Blogs</a></h5></div> 
+							<!--div class="col-lg-4 pr-0 pl-0 mob-2"><h5><a href="" target="_blank" class="lodha-color">Tools</a></h5></div> 
+							<div class="col-lg-4 pr-0 pl-0 mob-2"><h5><a href="https://www.lodhagroup.in/home-loan-eligibility-calculator/?tracker=homepage" target="_blank" class="lodha-color">Loan Eligibility Calc</a></h5></div--> 
+						</div> 
+					  </div> 
+					</div>
+				 </div>
+		</div><!-- container -->
+	</section><!-- End Contact Us Section -->
+	
+	<!-- ======= Contact Us Section ======= -->
+    <!--section id="contact2" class="contact mb-0 mt-0 pb-0">
+		<div class="container xborder-tb">
+				 <div class="row  d-flex align-items-stretch">
+					<div class="col-lg-12 pb-2 faq-item aos-init aos-animate" data-aos="fade-up">
+						<h2>Follow us on Insta</h2>
+						
+					</div>
+				 </div>
+		</div><!-- container -->
+		<!--div class="col-lg-12 pr-0 pl-0" >
+						<div class="row pr-0 pl-0">
+							<div class="col-md-12 instagramfeeds faq-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease-in-quad">		
+							<div data-mc-src="43402ff8-5f3f-456f-98ae-aa525c49c218#instagram" id="instagramWOXO"></div>
+							<script src="https://cdn2.woxo.tech/a.js#6103d1aef70b1b001556c122" async data-usrc></script>
+							</div>
+						</div> 
+					  </div>
+	</section--><!-- End Contact Us Section -->
+	<!-- ======= Instagram  ======= -->
+    <!--section id="portfolio" class="portfolio xsection-bg services">
+		 <div class="container" style="margin-bottom: 6%;">
+			 <div class="row  d-flex align-items-stretch">
+				<div class="col-lg-12 content-home faq-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease-in-quad" >
+					<h2>Follow us on Insta</h2>
+					
+				</div>
+			</div>
+		
+			<div class="col-lg-12">
+				 <div class="owl-carousel owl-theme"> 
+					<div class="item">
+					  <a href="https://www.instagram.com/lodhagroup_india/" target="_blank"><img src="assets/img/about.jpg"/></a>
+					 
+					</div>
+					<div class="item">
+					   <a href="https://www.instagram.com/lodhagroup_india/" target="_blank"><img src="assets/img/about.jpg"/></a>
+					 
+					</div>
+					<div class="item">
+					   <a href="https://www.instagram.com/lodhagroup_india/" target="_blank"><img src="assets/img/about.jpg"/></a>
+					  
+					</div>
+					<div class="item">
+					   <a href="https://www.instagram.com/lodhagroup_india/" target="_blank"><img src="assets/img/about.jpg"/></a>
+					  
+					</div>
+					<div class="item">
+					   <a href="https://www.instagram.com/lodhagroup_india/" target="_blank"><img src="assets/img/about.jpg"/></a>
+					 
+					</div>
+					<div class="item">
+					   <a href="https://www.instagram.com/lodhagroup_india/" target="_blank"><img src="assets/img/about.jpg"/></a>
+					 
+					</div>
+					<div class="item">
+					   <a href="https://www.instagram.com/lodhagroup_india/" target="_blank"><img src="assets/img/about.jpg"/></a>
+					 
+					</div>
+				  </div>
+          
+			 </div>
+			 </div>
+		 </div>	
+    </section-->  
+  <!-- ======= End Instagram  ======= -->
+  <!-- ======= Popup  ======= -->
+ <!--div id="ac-wrapper" style='display:none'>
+    <div id="popup">
+        <center><a href="https://www.lodhagroup.in/home/" class="ml-5 mt-2 pl-2 mob-logo-s"><img src="https://www.lodhagroup.in/home/assets/img/lodhagroup-logo.png" alt="" class="img-fluid "></a>
+		</center>
+		
+    </div>
+</div-->
+
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                 <center><a href="https://www.lodhagroup.in/home/"><img src="https://www.lodhagroup.in/home/assets/img/lodhagroup-logo.png" alt="" class="img-fluid "></a>
+		</center>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+			<a href="../joy?tracker=homepage_popup" target="_blank"><img class="desktop-show" src="assets/img/pop-img.jpg" alt="" title="" style="max-width: 100%;"></a>
+			<a href="../joy?tracker=homepage_popup" target="_blank"><img class="mobile-show" src="assets/img/pop-mobile-img.jpg" alt="" title="" style="max-width: 100%;"></a> 
+             <!--h2><span>Building A Better life</span></h2> 
+			  <p>We have delivered some of the world's finest developments.</p>
+			 <div class="row  pl-3 pr-3">
+			  <h2 style="float:left;font-size:24px;">Our Featured <span>Projects</span></h2>
+			  </div>
+			   <div class="row  pl-3 pr-3">
+			  <div class="col-lg-4 col-md-6 "><div class="border2">
+						<a href="https://www.lodhagroup.in/projects/residential-property-in-worli/world-towers/about?tracker=homepage_popup" target="_blank"><img src="assets/img/272x272_TWT_0604.jpg" alt="" class="thumb-img"></a>
+						<h3 class="hedding-h-3">TWT - India's finest living experience</h3>
+						<a class="slide-footer" href="https://www.lodhagroup.in/projects/residential-property-in-worli/world-towers/about?tracker=homepage_popup" target="_blank">Read More</a>
+					</div></div>
+			  <div class="col-lg-4 col-md-6 "><div class="border2">
+						<a href="http://www.palava.in/" target="_blank"><img src="assets/img/272x272_palava_01.jpg" alt="" class="thumb-img"></a>
+						<h3 class="hedding-h-3">Palava - India's number one smart city</h3>
+						<a class="slide-footer" href="http://www.palava.in/" target="_blank">Read More</a>
+					</div></div>
+			  <div class="col-lg-4 col-md-6 "><div class="border2">
+						<a href="https://www.lodhagroup.in/projects/residential-property-in-kandivali/lodha-woods/about?tracker=homepage_popup" target="_blank"><img src="assets/img/272x272_JV_Kandivali_01.jpg" alt="" class="thumb-img"></a>
+						<h3 class="hedding-h-3">Woods - Forest living in the heart of the city</h3>
+						<a class="slide-footer" href="https://www.lodhagroup.in/projects/residential-property-in-kandivali/lodha-woods/about?tracker=homepage_popup" target="_blank">Read More</a>
+					</div></div>
+			  </div--> 
+            </div>
+            <!--div class="modal-footer">
+                <a href="https://www.lodhagroup.in/all-projects?tracker=homepage_popup">Explore all Lodha projects</a>
+            </div-->
+        </div>
+    </div>
+</div>
+  <!-- ======= End Popup  ======= -->
+
+  </main><!-- End #main -->
+ <!-- ======= Footer ======= -->
+   <!-- ======= Footer ======= -->
+   <footer id="footer">
+    <div class="xcontainer container-fluid">
+		<div class="copy">
+                    <img class="svgBox lodhasvg" src="assets/img/lodhalogo.svg"> 
+                    <p>&copy; LODHAGroup 2019</p>
+                </div>
+                <div class="midSec col-footer">
+                    <div id="block-firstfooter" class="block-block-content block-firstfooter">
+
+                        <div class="basic__body" id="foo-STP">
+                            <ul>
+                                <li><a href="https://www.lodhagroup.in/sitemap">Site Map</a></li>
+                                <li><a href="https://www.lodhagroup.in/terms-and-conditions">Terms &amp; Conditions</a></li>
+                                <li><a href="https://www.lodhagroup.in/privacy-policy">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="xrightSec col-footer rightSecf"> 
+                    <div class="social-icons float-right">
+						<div id="block-footersecond" class="block-block-content block-footersecond">
+  
+							<div class="basic__body" id="foo-Social">
+								<p style="margin-bottom: 5px;padding:0px 8px;"><a href="https://www.lodhagroup.in/social-wall/" style="color: #fff;" target="_blank"> Socials</a></p>
+								<ul>
+									<li><a href="https://twitter.com/LODHA" target="_blank"><img class="svgBox" src="http://lodhagroup.in/themes/basic/images/svg/twitter.svg"></a></li>
+									<li><a href="https://www.facebook.com/LodhaGroup/" target="_blank"><img class="svgBox" src="http://lodhagroup.in/themes/basic/images/svg/facebook.svg"></a></li>
+									<li><a href="https://www.youtube.com/thelodhagroup" target="_blank"><img class="svgBox" src="http://lodhagroup.in/themes/basic/images/svg/youtube.svg"></a></li>
+									<li><a href="https://www.instagram.com/lodhagroup_india/" target="_blank"><img class="svgBox" src="http://lodhagroup.in/themes/basic/images/svg/insta.svg"></a></li>
+									<li><a href="https://in.linkedin.com/company/lodha-group" target="_blank"><img class="svgBox" src="http://lodhagroup.in/themes/basic/images/svg/linkedin.svg"></a></li>
+								</ul>
+							</div>
+						  
+					<!-- END OUTPUT from 'themes/basic/templates/field.html.twig' -->
+
+</div>
+<div class="js-form-item" data-drupal-selector="newsletterform" id="block-newsletterform">
+<h2>Subscribe to Lodha Blogs</h2>
+<!-- action="/blogs/benefits-of-owning-a-home" -->
+<form action="javascript:void(0);" id="newsletterform" accept-charset="UTF-8" autocomplete="off">
+<input id="email" data-label="true" data-drupal-selector="edit-email" type="text" name="email" value="" size="60" maxlength="128" placeholder="Enter your Email id" class="form-text" style="color: black;">
+<!-- <span id="mailErr" class="error"></span> -->
+<span style="color:#ff0000; font-size:15px; line-height:0;display:none;" id="email_error">Email Required!</span>
+<span style="color:#ff0000; font-size:15px; line-height:0;display:none;" id="email_invalid">Email-id is invalid!</span>
+<span style="color:#25d366; font-size:15px; line-height:0;display:none;" id="subscribe-sucess">Thank you for subscribing to us.</span>
+<span style="color:green; font-size:15px; line-height:0;display:none;" id="subscribe-error">Not Submitted!</span>
+<span style="color:red; font-size:15px; line-height:0;display:none;" id="subscribe-already-error">Email-id already exist!</span>
+
+<!-- Hidden fields -->
+<!--input type="hidden" id="waybeotrackid" value="<?//=WAYBEOTRACKID;?>" / -->
+<input type="hidden" name="countryCode" id="countryCode" value="+91">
+<input type="hidden" name="token" id="token" value="ecd450965a06eb3a5f403f91bc668f7e67472c9a">
+<input type="hidden" name="cookieName" value="lodhagroupHome" />
+<input type="hidden" name="campaignName" value="lodhagrouphome" />
+<input type="hidden" name="campaignURL" value="https://www.lodhagroup.in/home/" />
+
+<!-- Static Values -->
+<input type="hidden" name="LeadSource" value="Web-Prospect" />
+<input type="hidden" name="LG_Lead_Created_Mode__c" value="Web" />
+<input type="hidden" name="Status" value="Open" />
+<!-- END Static Values -->
+
+<!-- END Project config -->
+<input type="hidden" name="RecordTypeId" value="0124G000000QtyD" />
+<input type="hidden" name="ExistingProjectID__c" value="a092000000BaNrz" />
+<input type="hidden" name="Cluster_Name__c" value="" />
+<!-- END Project config -->
+
+<!-- UTM Paramters -->
+<input type="hidden" name="WebBanner_Source__c" id="WebBanner_Source__c" value="Organic-Search-GOO-lodhagroup.in" />
+<input type="hidden" name="LG_Short_Code__c" id="LG_Short_Code__c" value="Organic-Search" />
+<input type="hidden" name="Banner_Size__c" id="Banner_Size__c" value="" />
+<input type="hidden" name="Digital_Source__c" id="Digital_Source__c" value="" />
+<input type="hidden" name="Digital_Medium__c" id="Digital_Medium__c" value="" />
+<input type="hidden" name="Keyword__c" id="Keyword__c" value="" />
+<input type="hidden" name="Placement__c" id="Placement__c" value="" />
+<input type="hidden" name="Adgroup__c" id="Adgroup__c" value="" />
+<input type="hidden" name="Adposition__c" id="Adposition__c" value="" />
+<input type="hidden" name="Matchtype__c" id="Matchtype__c" value="" />
+<input type="hidden" name="Network__c" id="Network__c" value="" />
+<input type="hidden" name="GCLID__c" id="GCLID__c" value="" />
+<input type="hidden" name="Visitor_Type__c" id="Visitor_Type__c" value="" />
+<input type="hidden" name="utm_content__c" id="utm_content__c" value="" />
+<!-- END Project config -->
+
+<!-- Form tracking code -->
+<input type="hidden" name="Form_Tracker__c" id="Form_Tracker__c" value="Prospect Lead" />
+<input type="hidden" name="First_Visit__c" id="First_Visit__c" value="2022-04-25 12:27:19" />
+<input type="hidden" name="Landing_Page_URL__c" id="Landing_Page_URL__c" value="https://www.lodhagroup.in/home/" />
+<input type="hidden" name="Visit_Duration__c" id="Visit_Duration__c" value="2022-04-25 15:27:37" />
+<input type="hidden" name="Time_Spent_before_Form_Submit__c" id="Time_Spent_before_Form_Submit__c" value="" />
+<input type="hidden" name="IP_Address__c" id="IP_Address__c" value="" />
+<input type="hidden" name="Resolution__c" id="Resolution__c" value="" />
+<input type="hidden" name="Browser__c" id="Browser__c" value="" />
+<input type="hidden" name="OS__c" id="OS__c" value="" />
+<input type="hidden" name="Device_Type__c" id="Device_Type__c" value="Desktop">
+<input type="hidden" name="Device__c" id="Device__c" value="" />
+<input type="hidden" name="Device_Name__c" id="Device_Name__c" value="">
+<!-- END Form tracking code --> 
+
+<input class="btn blue center fr button js-form-submit form-submit" data-drupal-selector="edit-submit" type="submit" id="btn-subscribe" name="op" value="Subscribe">
+<input class="btn blue center fr button js-form-submit form-submit" style="display:none;" data-drupal-selector="edit-submit" type="submit" id="loader" name="op" value="Processing...">
+<!-- <span id="loader" style="display:block;">Processing...</span> -->
+</form>  
+ </div>
+
+ </div>
+
+                </div>
+                <div class="clearfix"></div>
+                <div class="extendedFooter" style="xdisplay: none;">
+                    <div class="extendedTop">
+                        <div id="block-footerthree" class="block-block-content block-footerthree">
+
+                            <div class="basic__body" id="foo-one">
+                                <ul>
+                                    <li><a href="https://www.lodhagroup.in/all-projects">All Properties</a></li>
+                                    <li><a href="https://www.lodhagroup.in/residential-property">Residential Properties</a></li>
+                                    <li><a href="https://www.lodhagroup.in/commercial-property">Commercial Properties</a></li>
+                                    <li><a href="https://www.lodhagroup.in/property-in-mumbai">Properties In Mumbai</a></li>
+                                    <li><a href="https://www.lodhagroup.in/property-in-pune">Properties In Pune</a></li>
+                                    <li><a href="https://www.lodhagroup.in/property-in-hyderabad">Properties In Hyderabad</a></li>
+                                    <li><a href="https://www.lodhagroup.in/property-in-london">Properties In London</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <div id="block-footerfourth" class="block-block-content block-footerfourth">
+
+                            <div class="basic__body" id="foo-two">
+                                <!--p> </p-->
+
+                                <ul>
+                                    <li><a href="https://www.lodhagroup.in/all-projects?budgetTo=5000000">Properties under 50 lakhs</a></li>
+                                    <li><a href="https://www.lodhagroup.in/all-projects?budgetTo=10000000">Properties under 1Cr</a></li>
+                                    <li><a href="https://www.lodhagroup.in/all-projects?budgetTo=30000000">Properties under 3Cr</a></li>
+                                    <li><a href="https://www.lodhagroup.in/all-projects?budgetTo=50000000">Properties under 5 Cr</a></li>
+                                    <li><a href="https://www.lodhagroup.in/all-projects?budgetFrom=100000000">Properties above 10Cr</a></li>
+                                    
+                                </ul>
+                                <!--p>
+                                    <br>
+                                </p>
+
+                                <ul></ul>
+                                <p> </p-->
+                            </div>
+
+                        </div>
+
+                        <div id="block-footerfifth" class="block-block-content block-footerfifth">
+
+                            <div class="basic__body" id="foo-three">
+                                <ul>
+                                    <li><a href="https://www.lodhagroup.in/all-projects?propertyType=residential&amp;city=Pune&amp;typology=2">2 BHK Properties in Pune</a></li>
+                                    <li><a href="https://www.lodhagroup.in/all-projects?propertyType=residential&amp;city=Pune&amp;typology=3">3 BHK Properties in Pune</a></li>
+                                    <li class="mob-hideimp"><a href="https://www.lodhagroup.in/all-projects?propertyType=residential&amp;city=Pune&amp;typology=4+">4 BHK Properties in Pune</a></li>  
+                                </ul>
+                            </div>
+
+                        </div> 
+
+                        <div id="block-footerseaven" class="block-block-content block-footerseaven">
+
+                            <div class="basic__body" id="foo-four">
+                                <ul>
+                                    <li><a href="https://www.lodhagroup.in/available-properties">Available Projects</a></li>
+                                    <li><a href="https://www.lodhagroup.in/properties-sold-out">Sold out Projects</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="https://www.lodhagroup.in/property-in-thane">Properties In Thane</a></li>
+                                    <li><a href="https://www.lodhagroup.in/property-in-wadala">Properties in Wadala</a></li>
+                                    <li><a href="https://www.lodhagroup.in/all-projects?locality=Worli - Sion">Properties in Worli</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <div id="block-footereight" class="block-block-content block-footereight">
+
+                            <div class="basic__body" id="foo-five">
+                                <ul>
+                                    <li><a href="https://www.lodhagroup.in/all-projects?propertyType=residential&amp;city=mumbai&amp;typology=1">1 BHK Properties in Mumbai</a></li>
+                                    <li><a href="https://www.lodhagroup.in/all-projects?propertyType=residential&amp;city=mumbai&amp;typology=2">2 BHK Properties in Mumbai</a></li>
+                                    <li><a href="https://www.lodhagroup.in/all-projects?propertyType=residential&amp;city=mumbai&amp;typology=3">3 BHK Properties in Mumbai</a></li>
+                                    <li><a href="https://www.lodhagroup.in/all-projects?propertyType=residential&amp;city=mumbai&amp;typology=4+">4 BHK Properties in Mumbai</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+						
+						<div id="block-footereight" class="block-block-content block-footereight">
+
+                            <div class="basic__body" id="foo-five">
+                                <ul>
+                                    <li><a href="https://www.lodhagroup.in/underconstruction/">Properties Under Construction</a></li>
+                                    <li><a href="https://www.lodhagroup.in/readytomovein/">Properties Ready to move in</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <div id="block-footernine" class="block-block-content block-footernine">
+
+                            <div class="basic__body" id="foo-six">
+                                <ul>
+                                    <li><a href="https://www.lodhagroup.in/about-us/about-company">About Lodha</a></li>
+                                    <li><a href="https://www.lodhagroup.in/investor/overview">Investors Corner</a></li>
+                                    <li><a href="https://www.lodhagroup.in/nri/overview">NRI</a></li>
+                                    <li><a href="https://www.lodhagroup.in/hr/explore-career">Career</a></li>
+									<li><a href="https://www.lodhagroup.in/easylease/">Easylease</a></li> 
+                                </ul>
+                            </div>
+
+                        </div>
+						
+
+                    </div>
+					
+                    <div id="block-footersix" class="block-block-content block-footersix">
+
+                        <div class="basic__body" id="foo-seven">
+                            <ul class="extendedBottom">
+                                <li><a href="https://www.lodhagroup.in/blogs/all">Blogs</a></li>
+                                <li><a href="https://www.lodhagroup.in/lodha-group-maharera">Maharera Numbers </a></li>
+                                <li><a href="https://www.lodhagroup.in/contact-us">Contact Us</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+					
+
+                </div>
+                
+    </div>
+	
+<a class="mb-wbCall xno-f-page desk-hide" id="waybeoCall-mobile" href="tel:022999999" ><span><i class="fa fa-phone" aria-hidden="true"></i> </span> CONTACT</a>
+<a class="cta-open  xno-f-page desk-hide" href="javascript:void(0);" data-toggle="modal" data-target="#formPopup"><span><i class="fa fa-pencil" aria-hidden="true"></i> </span> GET IN TOUCH</a> 
+  </footer><!-- End Footer -->
+
+  
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Modal -->
+  <div class="modal fade show" id="formPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" style="display: none; padding-right: 17px;" aria-modal="true" >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      
+      <div class="modal-body">
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="FormClose">&times;</span>
+        </button>
+			<div class="getInTouchLightBox">
+	<div class="col-md-12">
+	
+		<h3 class="request-callback">GET IN TOUCH</h3>
+				<!--p class="mandatory"><small>all fields mandatory</small></p-->
+	</div>
+     <div class="formWrapper">
+		<form id="lead-form" name="leadForm" autocomplete="off">
+                <!--Grid row-->
+                <div class="container-fluid no-padding">
+                    <!--Grid column-->
+                    <div class="col-md-12 fieldRow">
+                        <div class="xmd-form xmb-4 inputWrap">
+							<!--label for="name" class="">Your name</label-->
+                            <input type="text" id="name" name="LastName" class="form-control" placeholder="Name" required oninput="this.value = this.value.replace(/[^A-Za-z .]/g, '').replace(/(\..*)\./g, '$1');" />
+							<span id='nameErr' class="Error"></span>
+                        </div>
+                    </div>
+					
+                   <div class="col-md-12 fieldRow">
+                        <div class="xmd-form xmb-4 inputWrap">
+                            <input type="email" id="email" name="Email" class="form-control" placeholder="E-mail" required />
+							<span id='emailErr' class="Error"></span>
+                        </div>
+                    </div>
+					
+					<div class="col-md-12 fieldRow">
+                        <div class="xmd-form xmb-4 inputWrap">
+							<select id="country" name="Country_R__c" class="form-control" required />
+								<option value="India" data-code="IN" data-dial="+91" selected>India</option>
+								<option value="United Arab Emirates" data-code="AE" data-dial="+971">United Arab Emirates</option>
+								<option value="United States" data-code="US" data-dial="+1">United States</option>
+								<option value="United Kingdom" data-code="GB" data-dial="+44">United Kingdom</option>
+								<option value="Saudi Arabia" data-code="SA" data-dial="+966">Saudi Arabia</option>
+								<option value="Canada" data-code="CA" data-dial="+1">Canada</option>
+								<option value="Singapore" data-code="SG" data-dial="+65">Singapore</option>
+								<option value="Hong Kong" data-code="HK" data-dial="+852">Hong Kong</option>	
+								<option value="Kenya" data-code="KE" data-dial="+254">Kenya</option>
+								<option value="Kuwait" data-code="KW" data-dial="+965">Kuwait</option>
+							</select>
+							<span id='countryErr' class="Error"></span>
+						</div>
+					</div>
+
+					<div class="col-md-12 fieldRow">
+                        <div class="xmd-form xmb-4 inputWrap">
+							<select id="city" name="City_R__c" class="form-control" required />
+							</select>
+							<span id='cityErr' class="Error"></span>
+							<input type="text" id="otherCity" name="Specify_Other_for_City_R__c" class="form-control" placeholder="City name" style="display:none;">
+							<span id='otherCityErr' class="Error"></span>
+						</div>
+					</div>
+					
+                    <div class="col-md-12 fieldRow">
+                        <div class="xmd-form xmb-4 inputWrap">
+							<span id="ph-code">+91</span>
+							<input type="tel" maxlength="10" id="mobile" name="Mobile__c" class="form-control tel" placeholder="Mobile" required="" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+							<span id='mobileErr' class="Error"></span>
+                        </div>
+                    </div>
+					
+                    <div class="col-md-12 fieldRow">
+                        <div class="xmd-form xmb-4 inputWrap"> 
+							<input type="tel" maxlength="4" id="otp" class="form-control" placeholder="OTP code" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" style="display:none;" />
+							<span id='otpErr' class="Error"></span>
+                        </div>
+                    </div>
+					
+                    <div class="col-md-12 my-clear">
+                        <div class="md-form mb-0 text-center">
+							<button type="submit" id="formSubmitBtn" class="btn btn-primary">Submit</button>
+							<span id="loader" style="display:none;">Sending...</span>
+                        </div>
+						<p>&nbsp;</p>
+                    </div>
+                    <!--//Grid column-->
+					<!--div class="col-md-12 mob-hide desk-show">
+                        <div class="md-form mb-4">
+							<p class="call-no"><center class="call-no">Call Us : <a href="tel:022999999"  id="waybeoCall">022 999999</a></center></p> 
+                        </div>
+                    </div--> 
+                </div>
+                <!-- END Grid row-->
+			
+<!-- Hidden fields -->
+<!--input type="hidden" id="waybeotrackid" value="<?//=WAYBEOTRACKID;?>" / -->
+
+<input type="hidden" name="token" id="token" value="ecd450965a06eb3a5f403f91bc668f7e67472c9a">
+<input type="hidden" name="cookieName" value="lodhagroupHome" />
+<input type="hidden" name="campaignName" value="lodhagrouphome" />
+<input type="hidden" name="campaignURL" value="https://www.lodhagroup.in/home/" />
+
+<!-- Static Values -->
+<input type="hidden" name="LeadSource" value="Web" />
+<input type="hidden" name="LG_Lead_Created_Mode__c" value="Web" />
+<input type="hidden" name="Status" value="Open" />
+<!-- END Static Values -->
+
+<!-- END Project config -->
+<input type="hidden" name="RecordTypeId" value="0124G000000QtyD" />
+<input type="hidden" name="ExistingProjectID__c" value="a092000000BaNrz" />
+<input type="hidden" name="Cluster_Name__c" value="" />
+<!-- END Project config -->
+
+<!-- UTM Paramters -->
+<input type="hidden" name="WebBanner_Source__c" id="WebBanner_Source__c" value="Organic-Search-GOO-lodhagroup.in" />
+<input type="hidden" name="LG_Short_Code__c" id="LG_Short_Code__c" value="Organic-Search" />
+<input type="hidden" name="Banner_Size__c" id="Banner_Size__c" value="" />
+<input type="hidden" name="Digital_Source__c" id="Digital_Source__c" value="" />
+<input type="hidden" name="Digital_Medium__c" id="Digital_Medium__c" value="" />
+<input type="hidden" name="Keyword__c" id="Keyword__c" value="" />
+<input type="hidden" name="Placement__c" id="Placement__c" value="" />
+<input type="hidden" name="Adgroup__c" id="Adgroup__c" value="" />
+<input type="hidden" name="Adposition__c" id="Adposition__c" value="" />
+<input type="hidden" name="Matchtype__c" id="Matchtype__c" value="" />
+<input type="hidden" name="Network__c" id="Network__c" value="" />
+<input type="hidden" name="GCLID__c" id="GCLID__c" value="" />
+<input type="hidden" name="Visitor_Type__c" id="Visitor_Type__c" value="" />
+<!-- END Project config -->
+
+<!-- Form tracking code -->
+<input type="hidden" name="Form_Tracker__c" id="Form_Tracker__c" value="Prospect Lead" />
+<input type="hidden" name="First_Visit__c" id="First_Visit__c" value="2022-04-25 12:27:19" />
+<input type="hidden" name="Landing_Page_URL__c" id="Landing_Page_URL__c" value="https://www.lodhagroup.in/home/" />
+<input type="hidden" name="Visit_Duration__c" id="Visit_Duration__c" value="2022-04-25 15:27:37" />
+<input type="hidden" name="Time_Spent_before_Form_Submit__c" id="Time_Spent_before_Form_Submit__c" value="" />
+<input type="hidden" name="IP_Address__c" id="IP_Address__c" value="" />
+<input type="hidden" name="Resolution__c" id="Resolution__c" value="" />
+<input type="hidden" name="Browser__c" id="Browser__c" value="" />
+<input type="hidden" name="OS__c" id="OS__c" value="" />
+<input type="hidden" name="Device__c" id="Device__c" value="" />
+<input type="hidden" name="Device_Name__c" id="Device_Name__c" value="">
+<!-- END Form tracking code -->	
+            </form>
+     
+		</div>
+	 </div>	  </div>
+     
+    </div>
+  </div>
+</div>
+<!-- Modal End-->
+<script src="https://unpkg.com/plyr@3/dist/plyr.min.js" crossorigin="anonymous"></script>
+<script>
+const player = new Plyr('#Player', { autoplay: true });
+//player.poster = 'https://uat.lodhagroup.in/projects/campaigns/lodha-park/assets/img/slide/slider-01.jpg';
+console.log(player.paused);
+
+var t=setInterval(runFunction, 1000);
+function runFunction(){
+	var heading = document.getElementById('videoHeading');
+	if(player.paused){
+		heading.style.display = 'block';
+	}else{
+		heading.style.display = 'none';
+	}
+}
+</script>
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/jquery/jquery.min.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+<!--script src="assets/vendor/php-email-form/validate.js"></script-->
+<script src="assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+<script src="assets/vendor/venobox/venobox.min.js"></script>
+<script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+<script src="assets/vendor/counterup/counterup.min.js"></script>
+<script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<!-- SFDC Form Script -->
+<script> var onload_datetime = "25-04-2022 15:27:37"; </script>
+<script src="inc/moment.js?1650880657"></script>
+<script src="inc/ua-parser.min.js?1650880657"></script>
+<script src="inc/sfdcLeadForm.js?1650880657"></script>
+<script src="inc/waybeo.js?1650880657"></script>
+<script src="inc/mixpanelTrackingCode.js?1650880657"></script>
+<!-- END SFDC Form Script -->
+
+<!-- Vendor JS Files -->
+<!--script src="assets/vendor/jquery/jquery.min.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+<script src="assets/vendor/venobox/venobox.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script-->
+
+<!-- Template Main JS File -->
+<script src="assets/js/main.js"></script>
+<script src="assets/js/jquery.multipurpose_tabcontent.js"></script> 
+<script src="assets/js/responsiveslides.min.js"></script>
+<!-- Template tabs JS File -->
+<script src="assets/js/index.js"></script>
+<script src="assets/js/jquery.ba-resize.js"></script>
+<script src="assets/js/jquery.tabs+accordion.js"></script> 
+<!-- plan gallery JS File -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.14/js/lightgallery-all.min.js'></script>
+<script src="assets/js/lightgallery-script.js"></script>  
+<!-- Template gallery JS File -->
+<script src="assets/js/fotorama.js"></script>
+
+<!-- Template video slider -->
+<!--script src="assets/js/galleria.js"></script-->
+
+<!-- swiper slider -->
+<script src="assets/js/swiper-bundle.min.js"></script>
+
+ <!-- metisMenu -->
+ <!--script src="js/metisMenu.min.js"></script--> 
+ 
+ <!-- hover Js -->
+ <script src="assets/js/modernizr.custom.js"></script> 
+ <script src="assets/js/toucheffects.js"></script>  
+
+<script type="text/javascript">
+$(window).scroll(function(){
+    if ($(this).scrollTop() > 450) {
+		$('.contact-btn').addClass('show-whendown');
+	} else {
+		$('.contact-btn').removeClass('show-whendown');
+	}
+});
+
+// You can also use "$(window).load(function() {" | '$(function () {'
+$(document).ready(function(){
+
+/* 
+$("#lead-form #name").blur(function(){
+	digitaldata= {form: {formName:"Casa Greenwood call back form"}}; _satellite.track("form-start");
+});
+		
+$("#lead-form #formSubmitBtn").click(function(){
+	//var gtitle = jQuery.trim(title[0]);
+	var siteFormName = "Casa Greenwood call back form";
+	var sitePageName = "Casa Greenwood Campaign";
+
+	var India = $( "#lead-form #country" ).val();
+	var a = $( "#lead-form #name" ).val();
+	var b = $( "#lead-form #email" ).val();
+	var c = $( "#lead-form #mobile" ).val();
+	var d = $( "#lead-form #otp" ).val();
+	//var e = $( "#lda-lead-form #frmProject" ).val();
+	var formError = "";
+
+	if(a == ""){
+		formError += "Name field is empty| ";
+	}
+	if(b == ""){
+		formError += "Email field is empty| ";
+	}
+	if(c == ""){
+		formError += "Mobile field is empty| "
+	}
+	if(d == "" && India == "India" && vOTP == false){
+		formError += "OTP field is empty| ";
+	}
+	/* if(e == ""){
+		formError += "Project field is empty"
+	} * /
+	if(vOTP == false && d != "" && India == "India"){
+		formError += "OTP does not match";
+	}
+
+	//console.log(India);
+	if(formError != ""){
+		digitaldata = { form: {formName: siteFormName, pageName: sitePageName, errorName: formError} }; _satellite.track("form-error");		
+	}else{
+		digitaldata.form = { form: {formName:siteFormName, pageName: sitePageName, formstatus:'end'} }; _satellite.track("form-end");
+	}
+}); //END Adobe form code
+*/
+
+	$('.accordion, .tabs').TabsAccordion({
+		hashWatch: true,
+		pauseMedia: true,
+		responsiveSwitch: 'tablist',
+		saveState: sessionStorage,
+	});
+	// Slideshow 4
+	$("#slider4").responsiveSlides({
+		auto: true,
+		pager: false,
+		nav: true,
+		speed: 500,
+		namespace: "callbacks",
+	});
+
+	$(".first_tab").champ();
+
+	$(".accordion_example").champ({
+		plugin_type: "accordion",
+		side: "left",
+		active_tab: "3",
+		controllers: "true"
+	});
+	
+	$('.panel-group').on('hidden.bs.collapse', toggleIcon);
+	$('.panel-group').on('shown.bs.collapse', toggleIcon);
+
+	$("#tab-1").click(function(){
+		$('.slideshow-container').slick('refresh');
+	});
+
+	$("#tab-2").click(function(){
+		$('.carousel-2').slick('refresh');
+	});
+
+	$("#tab-3").click(function(){
+		$('.carousel-3').slick('refresh');
+	});
+	
+	/* Instagram Feeds */
+/*var instagramUser = 'lodha_luxury';*/
+var instagramUser = 'lodhagroup_india';
+var postLimit = 11;
+var instaPreviewLink = 'https://www.instagram.com/p/';
+var instagramFeeds = '';
+	$.getJSON('https://www.instagram.com/'+instagramUser+'/?__a=1', function(data){
+			// JSON result in `data` variable JSON.stringify(obj, null, ' ')
+			console.log(data);
+//console.log(data.graphql.user.edge_owner_to_timeline_media.edges[0].node.thumbnail_resources[2].src);
+//data.graphql.user.edge_owner_to_timeline_media.edges.[0].node.thumbnail_resources.2.src
+			if(data.graphql.user.full_name != ""){
+				for(var i=0;i<postLimit;i++){
+					var instaPreviewCode = data.graphql.user.edge_owner_to_timeline_media.edges[i].node.shortcode;
+					var instaImgSrc = data.graphql.user.edge_owner_to_timeline_media.edges[i].node.thumbnail_resources[2].src;
+					instagramFeeds += "<li><a href='"+instaPreviewLink+instaPreviewCode+"' target='_blank'><img class='' src='"+instaImgSrc+"'></a></li>";
+				}
+				//console.log(instagramFeeds);
+				$('ul#instagramfeeds').append(instagramFeeds);
+			}else{
+				console.log("Please check Instagram username?");
+			}
+			
+		}).fail(function(jqXHR, textStatus, errorThrown) { console.log('Invalid instagram username: ' + textStatus); });
+/* END Instagram Feeds */
+}); //EODoc
+
+function toggleIcon(e) {
+    $(e.target).prev('.panel-heading').find(".more-less").toggleClass('glyphicon-plus glyphicon-minus');
+}
+</script>
+<script>
+$(function() {
+	/* // Load the Twelve theme
+	Galleria.loadTheme('galleria.twelve.js');
+	// Initialize Galleria
+	Galleria.run('.galleria'); */
+});
+</script>
+
+	<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+<script>
+ $(function() {
+    $('.scroll-down').click (function() {
+      $('html, body').animate({scrollTop: $('#ok').offset().top-92}, 'slow'); 
+      return false;
+    });
+  });
+</script>
+  <script>
+   /*  $(function() {
+
+      $('#auto-collapse-menu-demo').metisMenu();
+
+    }); */
+  </script>
+ <script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+	dropdownContent.style.display = "none";
+	$('.dropdown-btn i').removeClass('fa-minus');
+	$('.dropdown-btn i').addClass('fa-plus');
+  } else {
+	$('.dropdown-btn i').removeClass('fa-plus');
+	$('.dropdown-btn i').addClass('fa-minus');
+	dropdownContent.style.display = "block";	
+  }
+  });
+}
+</script>  
+<script>
+
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+ function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+} 
+</script>
+<script>
+  $(document).ready(function() {
+     function toggleMute() {
+
+  var video=document.getElementById("myVideo");
+
+  video.muted = !video.muted; 
+  }
+});
+</script> 
+<script type="text/javascript">
+$('#btn-subscribe').click(function(){
+    // console.log($("#newsletterform").serialize());return false;
+    var email = $('#email').val();
+    var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    if(email==''){
+        $("#email_error").show().delay(5000).fadeOut();
+        $("#email").focus();
+        return false;
+    }
+    if(!regex.test(email)){
+        $("#email_invalid").show().delay(5000).fadeOut();
+        $("#email").focus();
+        return false;
+    }
+    else
+    {
+        var data = $("#newsletterform").serialize();
+        $.ajax({
+            url: "subscribe-submit.php",
+            type: "post",
+            dataType: 'json',
+            data: data,
+            beforeSend: function(){
+				$("#btn-subscribe").hide(); 
+				$("#loader").css("display", "inline").prop('disabled', true);
+			},
+            success:function(response){
+                console.log(response);//return false;
+                //console.log(response.success);//return false;
+                if(response.success==true){
+                    $("#subscribe-sucess").show().delay(5000).fadeOut();
+                    $("#email").focus();
+                    $("#email").val('');
+                    $("#loader").hide();
+                    $("#btn-subscribe").show();
+                    return false;
+                }
+                else{
+                    // $("#subscribe-error").show().delay(5000).fadeOut();
+                    $("#subscribe-already-error").show().delay(5000).fadeOut();
+                    $("#email").focus();
+                    $("#loader").hide();
+                    $("#btn-subscribe").show();
+                    return false;
+                }
+                /*if(response.unsuccess==false)
+                {
+                	alert(1);
+                	$("#subscribe-already-error").show().delay(5000).fadeOut();
+                    $("#email").focus();
+                    return false;
+                }*/
+            }
+        });
+    }
+});    
+</script>
+<!-----==========Popup==========----->
+<script>
+/* $(window).on('load',function(){
+    var delayMs = 1500; // delay in milliseconds
+    
+    setTimeout(function(){
+        $('#myModal').modal('show');
+    }, delayMs);
+}); */
+$(document).ready(function() {
+     if (sessionStorage.getItem('#myModal') !== 'true') {
+         $('#myModal').modal('show');
+         sessionStorage.setItem('#myModal','true');     
+     }
+ });
+</script> 
+
+</body>
+</html> 
+   
+<!--script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script-->
+
+<script> 
+var slidesPerViewCount = 3;
+if(window.screen.width >= 1360){
+	slidesPerViewCount = 3;
+}else if(window.screen.width >= 1080){
+	slidesPerViewCount = 3;
+}else if(window.screen.width <= 767){
+	slidesPerViewCount = 1;
+}else{
+	slidesPerViewCount = 1;
+}
+//var slidesPerViewCount = 3; //3 sliders
+
+ $(document).ready(function () {
+  var swiper = new Swiper(".swiper-container", {
+   slidesPerView: slidesPerViewCount,
+      spaceBetween: 20,
+      slidesPerGroup: 1,
+	autoplay: {
+      delay: 5000,
+      disableOnInteraction: false
+    },
+    speed: 500,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+	  type: "progressbar",
+      type: "fraction"
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+     on: {
+      init: function () {
+        $(".swiper-progress-bar").removeClass("animate");
+        $(".swiper-progress-bar").removeClass("active");
+        $(".swiper-progress-bar").eq(0).addClass("animate");
+        $(".swiper-progress-bar").eq(0).addClass("active");
+      },
+      slideChangeTransitionStart: function () {
+        $(".swiper-progress-bar").removeClass("animate");
+        $(".swiper-progress-bar").removeClass("active");
+        $(".swiper-progress-bar").eq(0).addClass("active");
+      },
+      slideChangeTransitionEnd: function () {
+        $(".swiper-progress-bar").eq(0).addClass("animate");
+      }
+    } 
+  });
+});
+
+
+ </script> 
+
+ <script> 
+            $(document).ready(function() {
+              $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                responsiveClass: true,
+                responsive: {
+                  0: {
+                    items: 1,
+                    nav: true
+                  },
+                  600: {
+                    items: 2,
+                    nav: false
+                  },
+                  1000: {
+                    items: 3,
+                    nav: true,
+                    loop: false,
+                    margin: 20
+                  }
+                }
+              })
+			   AOS.init({
+ duration: 1200
+}); 
+})
+</script>
+<script>
+const typedTextSpan = document.querySelector(".typed-text");
+const cursorSpan = document.querySelector(".cursor");
+const textArray = ["Mumbai", "Thane", "Pune", "Hyderabad"];
+const typingDelay = 200;
+const erasingDelay = 100;
+const newTextDelay = 2000; // Delay between current and next text
+let textArrayIndex = 0;
+let charIndex = 0;
+
+function type() {
+  if (charIndex < textArray[textArrayIndex].length) {
+    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+    typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, typingDelay);
+  } 
+  else {
+    cursorSpan.classList.remove("typing");
+  	setTimeout(erase, newTextDelay);
+  }
+}
+
+function erase() {
+	if (charIndex > 0) {
+    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+    typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+    charIndex--;
+    setTimeout(erase, erasingDelay);
+  } 
+  else {
+    cursorSpan.classList.remove("typing");
+    textArrayIndex++;
+    if(textArrayIndex>=textArray.length) textArrayIndex=0;
+    setTimeout(type, typingDelay + 1100);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+  if(textArray.length) setTimeout(type, newTextDelay + 250);
+});
+          
+          </script>
+		 
+ <script> 
+ $(document).ready(function() {
+	/* $('.Knowmore-click-track').on('click', function () {
+	// create variable from data-event-name attribute
+	eventName = $(this).data("event-name");
+	// record Mixpanel event
+	mixpanel.track(eventName); 
+	}); //mixpanel demo code */	
+});
+	
+	
+document.addEventListener('readystatechange', event => {
+    //When HTML/DOM elements are ready:
+    /* if(event.target.readyState === "interactive") {
+		//does same as:  ..addEventListener("DOMContentLoaded"..
+        alert("Page onLoad");
+    } */
+	/* $("#instagramWOXO article div div.wx-widget-container div a").hide();
+    //When window loaded ( external resources are loaded too- `css`,`src`, etc...) 
+    if(event.target.readyState === "complete") {
+		console.log('Page complete loaded');
+		//$("iframe").contents().find("a").hide('fast');
+		//var ifram = $("#instagramWOXO").contents().find("a.css-11cewt9").attr("href");
+		var ifram = $("#instagramWOXO article div iframe").contents().find("a.css-11cewt9").attr("href");
+		console.log(ifram);
+    } */
+}); 
+</script>  
